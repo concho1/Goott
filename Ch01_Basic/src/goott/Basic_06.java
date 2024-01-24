@@ -8,9 +8,9 @@ import java.util.*;
  * %o => 8진수, char
  * %x => 16진수
  * .2 => 소수점 2자리 까지 제한(알아서 반올림 해줌)
- * 2 => 2칸 기준으로 오른쪽 정렬
+ * 2  => 2칸 기준으로 오른쪽 정렬
  * -2 => 2칸 기준으로 왼쪽 정렬
- * , => 은행식 숫자 표현
+ * ,  => 은행식 숫자 표현
 */
 public class Basic_06 {
 	public static void main(String[] args) {
