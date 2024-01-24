@@ -1,5 +1,7 @@
 package goott;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 public class Variable_08 {
 
 	public static void main(String[] args) {
@@ -16,5 +18,29 @@ public class Variable_08 {
 		suList.add(su1);	suList.add(su2);
 		Collections.swap(suList, 0, suList.size()-1);
 		System.out.printf("su1: %d, su2: %d\n", suList.get(0), suList.get(1));
+		
+		//배열 => ArrayList
+		int[] arr1 = {1,2,3,4,5};
+		/*
+		 * Arrays.stream(int[]) : int[] => Stream<int>로 변환
+		 * Arrays.stream(int[]).boxed() => Stream<Integer>로 변환
+		 * Stream<Integer>.collect(Collectors.toList()) => Arraa
+		*/
+		Stream<Integer> arrIntegers = Arrays.stream(arr1).boxed();
+		List<Integer> arrList1 = Arrays.stream(arr1)
+									   .boxed()
+									   .collect(Collectors.toList());
+		
+		// forEach 메서드는 각 요소에 할당된 작업을 수행함
+		arrIntegers.forEach(System.out::print);
+		System.out.println();
+		arrList1.forEach(System.out::print);
+		System.out.println();
+		//forEach응용법 => 람다식 표현으로 for문 처럼 사용하기
+		arrList1.forEach(num ->{
+			Integer numTm = num * 10;
+			System.out.printf(" %d ",numTm);
+		});
+		System.out.println();
 	}
 }
