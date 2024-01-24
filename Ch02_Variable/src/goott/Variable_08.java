@@ -50,5 +50,22 @@ public class Variable_08 {
 			System.out.printf(" %d ",num);
 		});
 		System.out.println();
+		
+		//stream()과 mapToInt, toArray를 사용한 방법
+		int[] arrIntNew = arrList.stream().mapToInt(Integer::intValue).toArray();
+		for(int i : arrIntNew){
+			System.out.printf(" %d ", i);
+		}
+		System.out.println();
+		
+		// 다시한번 배열 => ArrayList복습
+		// String은 참조형이라 boxed필요 없음
+		String[] arrString = {"sa", "asd", "asd"};
+		List<String> arrList2 = Arrays.stream(arrString).collect(Collectors.toList());
+		arrList2.forEach(str -> {
+			System.out.printf(" %s ",str);
+		});
+		System.out.println();
+
 	}
 }
