@@ -42,5 +42,13 @@ public class Variable_08 {
 			System.out.printf(" %d ",numTm);
 		});
 		System.out.println();
+		
+		// 다시한번 배열 => ArrayList복습
+		int[] arrInt = {1,2,3,4,5};
+		List<Integer> arrList = Arrays.stream(arrInt).boxed().collect(Collectors.toList());
+		arrList.forEach(num -> {
+			System.out.printf(" %d ",num);
+		});
+		System.out.println();
 	}
 }
