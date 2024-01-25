@@ -5,7 +5,7 @@ import java.util.*;
  * 아니면 이 정수는 5의배수가 아닙니다. 출력
  * 단, 음수면 "음수가 입력되었습니다. 출력
  */
-public class IfElseEaxm_09 {
+public class IfElseEaxm_10 {
 	static void print(String s) {System.out.println(s);}
 	static int input(String s) {
 		Scanner sc = new Scanner(System.in);
