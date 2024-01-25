@@ -24,7 +24,7 @@ public class Variable_08 {
 		/*
 		 * Arrays.stream(int[]) : int[] => Stream<int>로 변환
 		 * Arrays.stream(int[]).boxed() => Stream<Integer>로 변환
-		 * Stream<Integer>.collect(Collectors.toList()) => Arraa
+		 * Stream<Integer>.collect(Collectors.toList()) => ArrayList
 		*/
 		Stream<Integer> arrIntegers = Arrays.stream(arr1).boxed();
 		List<Integer> arrList1 = Arrays.stream(arr1)
