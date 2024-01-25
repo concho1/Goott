@@ -35,6 +35,7 @@ public class IfElseEaxm_11 {
 	
 	
 	public static void main(String[] args) {
+		
 		var name = inputStr("이름을 입력하세요. : ");	
 		var koreanS = inputInt("국어점수를 입력하세요. : ");
 		var engS = inputInt("영어점수를 입력하세요. : ");	
@@ -54,5 +55,6 @@ public class IfElseEaxm_11 {
 		else if(avarage >= 70) 	print("학   점 : C 학점");
 		else if(avarage >= 60) 	print("학   점 : D 학점");
 		else 					print("학   점 : F 학점");
+		print("==================================");
 	}
 }
