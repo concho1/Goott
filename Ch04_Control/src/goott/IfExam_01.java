@@ -5,12 +5,12 @@ public class IfExam_01 {
 	public static void main(String[] args) {
 		int key = 2;
 		
-		String result = switch (key) {
-		    case 1 -> "일";
-		    case 2 -> "이";
-		    case 3 -> "삼";
-		    case 4 -> "사";
-		    default -> "Other";
+		int result = switch (key) {
+		    case 1 -> 1;
+		    case 2 -> 2;
+		    case 3 -> 3;
+		    case 4 -> 4;
+		    default -> 0;
 		};
 		System.out.println(result);
 		
@@ -32,6 +32,12 @@ public class IfExam_01 {
 				break;
 			}
 			default: System.out.println("out of range");
+		}
+		int su = 53;
+		if(su > 50) {
+			System.out.println("50이상");
+		}else {
+			System.out.println("50이하");
 		}
 
 	}
