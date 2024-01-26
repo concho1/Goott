@@ -32,8 +32,6 @@ public class IfElseEaxm_11 {
 		return re;
 	}
 	
-	
-	
 	public static void main(String[] args) {
 		
 		var name = inputStr("이름을 입력하세요. : ");	
