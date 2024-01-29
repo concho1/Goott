@@ -21,7 +21,5 @@ public class IfExam_02 {
 		}else {
 			System.out.println("이 정수는 5의 배수가 아닙니다.");
 		}
-		var skipChSet = new HashSet<Character>();
-		skipChSet.contains(sc);
 	}
 }
