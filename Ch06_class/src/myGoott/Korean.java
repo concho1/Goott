@@ -18,4 +18,5 @@ public class Korean {
 		this.name = name;
 		this.ssn = Integer.toString(ssn);
 	}
+	;
 }
