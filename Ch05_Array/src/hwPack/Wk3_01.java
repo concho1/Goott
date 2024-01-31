@@ -1,7 +1,6 @@
 package hwPack;
 import java.util.*;
 
-import hwPack.Wk3_03.student;
 public class Wk3_01 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -16,5 +15,6 @@ public class Wk3_01 {
 			if(arr[i] < min) min = arr[i];
 		}
 		System.out.printf("max: %d, min: %d", max, min);
+		sc.close();
 	}
 }

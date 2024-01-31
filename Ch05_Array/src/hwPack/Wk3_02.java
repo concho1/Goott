@@ -26,6 +26,6 @@ public class Wk3_02 {
 		for(int i=0; i<5; i++) {
 			System.out.printf("%d ", arr[i]);
 		}
-		
+		sc.close();
 	}
 }
