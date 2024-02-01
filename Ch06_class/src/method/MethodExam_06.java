@@ -37,6 +37,7 @@ public class MethodExam_06 {
 		case "%"->na(inInt1, inInt2);
 		default -> -1;
 		};
+		
 		System.out.printf("%d %s %d = %d",inInt1, str, inInt2, re);
 		sc.close();
 	}
