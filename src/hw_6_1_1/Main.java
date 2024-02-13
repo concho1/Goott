@@ -21,6 +21,7 @@ class Receipt{
         m = new HashMap<>();
     }
 
+
     void add(String name, int cost, int cnt){
         Food f = new Food(name, cost, cnt);
         m.put(name, f);
