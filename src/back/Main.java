@@ -1,35 +1,36 @@
 package back;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
 
+    // 메인 메소드: 예시 실행
     public static void main(String[] args) {
-        int n = 3; // n*n 좌표의 크기
-        int m = 3; // 뽑을 좌표의 개수
-        List<List<int[]>> allCombinations = new ArrayList<>();
-        combineCoordinates(n, m, allCombinations, new ArrayList<>(), 0, 0);
+        int[] people = {1, 2, 3}; // 사람 ID
+        int[] products = {10, 20, 30}; // 상품
+        List<List<Integer>> permutations = new ArrayList<>();
 
-        for (List<int[]> combination : allCombinations) {
-            for (int[] coord : combination) {
-                System.out.print("(" + coord[0] + ", " + coord[1] + ") ");
-            }
-            System.out.println();
+        generatePermutations(people, products, new ArrayList<>(), permutations, 0);
+
+        // 결과 출력
+        for (List<Integer> perm : permutations) {
+            System.out.println(perm);
         }
     }
 
-    public static void combineCoordinates(int n, int m, List<List<int[]>> allCombinations, List<int[]> currentCombination, int startX, int startY) {
-        if (currentCombination.size() == m) {
-            allCombinations.add(new ArrayList<>(currentCombination));
+    // 중복 순열 생성 메소드
+    public static void generatePermutations(int[] people, int[] products, List<Integer> current, List<List<Integer>> result, int index) {
+        if (index == people.length) { // 모든 사람이 선택을 마쳤으면 결과에 추가
+            result.add(new ArrayList<>(current));
             return;
         }
 
-        for (int x = startX; x < n; x++) {
-            for (int y = (x == startX ? startY : 0); y < n; y++) {
-                currentCombination.add(new int[]{x, y});
-                combineCoordinates(n, m, allCombinations, currentCombination, x + (y + 1) / n, (y + 1) % n);
-                currentCombination.remove(currentCombination.size() - 1);
-            }
+        for (int product : products) { // 각 사람마다 모든 상품을 선택하는 경우 탐색
+            current.add(product); // 현재 사람의 선택 추가
+            generatePermutations(people, products, current, result, index + 1); // 다음 사람으로 재귀 호출
+            current.remove(current.size() - 1); // 이전 상태로 복귀
         }
     }
 }
